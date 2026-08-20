@@ -75,7 +75,7 @@ This file contains metadata for all historical flood images used in the study.
 Each row corresponds to one image and documents its source, geographical location, and contextual details. 
 
 The file includes: 
-- **Geographical attributes** such as longitude, latitude, city, state, and U.S. ZIP code  
+- **Geographical attributes** such as longitude, latitude, city, state, and U.S. Zipcode  
 - **Web links** to reference news articles and corresponding Google Street View locations  
 - **Optional notes** describing the flood event, capture date, and any additional observations   
 
@@ -153,9 +153,9 @@ The survey (in English and Spanish languages) can be downloaded [here.](https://
 | `participant_ID` * | Encoded Amazon MTurk respondent ID |
 | `participant_longitude` * | Participant’s geographic longitude coordinate |
 | `participant_latitude` * | Participant’s geographic latitude coordinate |
-| `participant_zip_code` | Self-reported participant ZIP code |
-| `participant_city` * | Participant’s city (derived from ZIP code) |
-| `participant_state` * | Participant’s state (derived from ZIP code) |
+| `participant_zip_code` | Self-reported participant Zipcode |
+| `participant_city` * | Participant’s city (derived from Zipcode) |
+| `participant_state` * | Participant’s state (derived from Zipcode) |
 | `age` | Participant’s age range (multiple choice) |
 | `gender` | Participant’s gender |
 | `hispanic_or_latino` | Ethnicity identification |
@@ -173,7 +173,7 @@ The survey (in English and Spanish languages) can be downloaded [here.](https://
 | `selected_image` * | Flood image file shown from the selected folder |
 | `image_latitude` * | Flood image’s geographic latitude coordinate |
 | `image_longitude` * | Flood image’s geographic longitude coordinate |
-| `image_zip_code` * | Flood image location ZIP code |
+| `image_zip_code` * | Flood image location Zipcode |
 | `image_city` * | Flood image source city |
 | `image_state` * | Flood image source state |
 | `flood_risk_severity` | Perceived flood risk from image *(Likert scale 1–5)* |
@@ -236,12 +236,12 @@ The goal of this tutorial is to help users quickly understand the dataset struct
 
 ---
 
-### **2. ZIP Code, City, and State Extraction**
+### **2. Zipcode, City, and State Extraction**
 **Notebook:** `tutorials/geolocation_extraction.ipynb`  
 
 This tutorial focuses on geographical data processing for both the image metadata (`image_meta_data.csv`) and participant dataset (`mturk_data.csv`).  
 It demonstrates how to:
-- Extract **city** and **state** from ZIP codes using `pgeocode`
-- Derive **ZIP codes from  longitude and latitude** using `geopy`
+- Extract **city** and **state** from Zipcodes using `pgeocode`
+- Derive **Zipcodes from  longitude and latitude** using `geopy`
 
 ---
