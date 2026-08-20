@@ -75,7 +75,7 @@ This file contains metadata for all historical flood images used in the study.
 Each row corresponds to one image and documents its source, geographical location, and contextual details. 
 
 The file includes: 
-- **Geographical attributes** such as longitude, latitude, city, state, and U.S. ZIP code  
+- **Geographical attributes** such as longitude, latitude, city, state, and U.S. Zipcode  
 - **Web links** to reference news articles and corresponding Google Street View locations  
 - **Optional notes** describing the flood event, capture date, and any additional observations   
 
@@ -146,68 +146,6 @@ The survey instruments used in this study, available in both English and Spanish
 
 The survey (in English and Spanish languages) can be downloaded [here.](https://drive.google.com/drive/folders/1ayVVvuNrLUgNkr8_4UoATP3Ly9sxC6Bn)  
 
-<!-- ### **MTurk Data Dictionary**
-
-| **Data Field** | **Description** |
-|----------------|-----------------|
-| `participant_ID` * | Encoded Amazon MTurk respondent ID |
-| `participant_longitude` * | Participant’s geographic longitude coordinate |
-| `participant_latitude` * | Participant’s geographic latitude coordinate |
-| `participant_zip_code` | Self-reported participant ZIP code |
-| `participant_city` * | Participant’s city (derived from ZIP code) |
-| `participant_state` * | Participant’s state (derived from ZIP code) |
-| `age` | Participant’s age range (multiple choice) |
-| `gender` | Participant’s gender |
-| `hispanic_or_latino` | Ethnicity identification |
-| `race` | Participant’s race category (multiple choice) |
-| `race_self_identify_text` | Self-described race (optional) |
-| `education_level` | Highest education completed |
-| `languages_home` | Languages spoken at home |
-| `languages_home_other` | Other specified languages (optional) |
-| `last_flood_experience` | Most recent flood experience (year) |
-| `flood_preparation_actions` | Actions taken before a flood (multiple choice) |
-| `flood_response_actions` | Actions taken during a flood (multiple choice) |
-| `flood_map_experience` | Prior experience using flood maps |
-| `flood_map_experience_other` | Other map experience details (optional) |
-| `visualization_source` * | Selected folder name (one of five visualization sources) |
-| `selected_image` * | Flood image file shown from the selected folder |
-| `image_latitude` * | Flood image’s geographic latitude coordinate |
-| `image_longitude` * | Flood image’s geographic longitude coordinate |
-| `image_zip_code` * | Flood image location ZIP code |
-| `image_city` * | Flood image source city |
-| `image_state` * | Flood image source state |
-| `flood_risk_severity` | Perceived flood risk from image *(Likert scale 1–5)* |
-| `flood_frequency` | Perceived flood occurrence rate (in years) |
-| `flood_risk_understanding` | Understanding of flood risk *(Likert scale 1–5)* |
-| `confidence_in_map` | Confidence in image accuracy *(Likert scale 1–5)* |
-| `likely_to_buy_property` | Likelihood of buying property *(Likert scale 1–5)* |
-| `likely_to_rent_property` | Likelihood of renting property *(Likert scale 1–5)* |
-| `likely_to_buy_insurance` | Likelihood of buying insurance *(Likert scale 1–5)* |
-| `likely_to_take_preventive_actions` | Likelihood of taking preventive actions *(Likert scale 1–5)* |
-| `use_flood_maps_frequency` | Frequency of using flood maps *(Likert scale 1–5)* |
-| `ease_of_interpretation` | Ease of reading and interpreting the map *(Likert scale 1–5)* |
-| `additional_comments` | Open-ended participant comments (optional) |
-
----
-
-### **Historical Image Metadata Dictionary**
-
-| **Data Field** | **Description** |
-|----------------|-----------------|
-| `Image File Name` | Unique identifier for the image entry in the dataset |
-| `Country` | Country where the flood occurred *(U.S., for this dataset)* |
-| `State` | U.S. state where the event image was taken |
-| `City` | City where the image was taken |
-| `zipcode` * | 5-digit postal code of the flood location |
-| `Longitude` | Geographic longitude coordinate |
-| `Latitude` | Geographic latitude coordinate |
-| `Flood Name` | Name of the flood event *(if known)* |
-| `Date Taken` | Date the image was originally captured |
-| `Comment` | Notes about the scene or context |
-| `Web Link (Images)` | Link to the related news story or reference documentation |
-| `Web Link (Google Street View)` | Link to the corresponding Google Street View of the same location under normal conditions | -->
-
-
 
 ## **Implementation**
 
@@ -236,12 +174,12 @@ The goal of this tutorial is to help users quickly understand the dataset struct
 
 ---
 
-### **2. ZIP Code, City, and State Extraction**
+### **2. Zipcode, City, and State Extraction**
 **Notebook:** `tutorials/geolocation_extraction.ipynb`  
 
 This tutorial focuses on geographical data processing for both the image metadata (`image_meta_data.csv`) and participant dataset (`mturk_data.csv`).  
 It demonstrates how to:
-- Extract **city** and **state** from ZIP codes using `pgeocode`
-- Derive **ZIP codes from  longitude and latitude** using `geopy`
+- Extract **city** and **state** from Zipcodes using `pgeocode`
+- Derive **Zipcodes from  longitude and latitude** using `geopy`
 
 ---
